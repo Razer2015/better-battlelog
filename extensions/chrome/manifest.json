@@ -1,7 +1,7 @@
 {
     "name": "Better Battlelog (BBLog)",
     "short_name": "BBLog",
-    "version": "9.9.9",
+    "version": "4.9.3",
     "manifest_version": 2,
     "description": "Worldwide Leading Battlelog Browser Addon! Add many improvements and new features - for example stunning weapon information.",
     "homepage_url": "https://getbblog.com",
@@ -14,7 +14,7 @@
     },
     "content_scripts": [
         {
-            "matches": ["http://battlelog.battlefield.com/*", "http://battlelog.medalofhonor.com/*", "http://getbblog.com/*"],
+            "matches": ["*://battlelog.battlefield.com/*", "*://battlelog.medalofhonor.com/*", "http://getbblog.com/*"],
             "js": [
                 "shared/inject.js",
                 "init.js"
@@ -26,11 +26,7 @@
         "scripts": ["background.js"],
         "persistent": false
     },
-    "permissions": [
-        "http://battlelog.battlefield.com/*",
-        "http://battlelog.medalofhonor.com/*",
-        "http://getbblog.com/*"
-    ],
+    "permissions": ["*://battlelog.battlefield.com/*", "*://battlelog.medalofhonor.com/*", "*://getbblog.com/*"],
     "web_accessible_resources": [
         "shared/style-general.css",
         "shared/style-bf3-mohw.css",

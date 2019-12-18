@@ -20,7 +20,7 @@ var BBLog = {
      *
      * @type String
      */
-    version: '9.9.9',
+    version: '4.9.3',
     build: '',
 
     /**
