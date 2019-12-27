@@ -160,6 +160,23 @@
     left:100px;
 }
 
+#serverbrowser .servers-list tbody .server-row.bblog-serverbrowser-playercounts td {
+    line-height: 18px;
+}
+
+.bblog-serverbrowser-playercounts .bblog-slots.truecount {
+    padding: 2px;
+    color: #39b54a;
+}
+
+.bblog-serverbrowser-playercounts .bblog-slots.truecount.high {
+    color: #ff0000;
+}
+
+.bblog-serverbrowser-playercounts .bblog-slots.truecount.mid {
+    color: #99b839;
+}
+
 .bblog-serverbrowser-filters .bblog-slots{
     height:11px;
     line-height: 12px;

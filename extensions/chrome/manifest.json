@@ -1,12 +1,11 @@
 {
     "name": "Better Battlelog (BBLog)",
     "short_name": "BBLog",
-    "version": "4.9.3",
+    "version": "4.9.4",
     "manifest_version": 2,
     "description": "Worldwide Leading Battlelog Browser Addon! Add many improvements and new features - for example stunning weapon information.",
-    "homepage_url": "https://getbblog.com",
+    "homepage_url": "https://github.com/Razer2015/better-battlelog/",
     "minimum_chrome_version" : "18.0",
-    "update_url": "https://getbblog.com/update.xml",
     "icons": {
         "16": "shared/img/icon16.png",
         "48": "shared/img/icon48.png",

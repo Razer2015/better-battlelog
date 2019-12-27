@@ -19,7 +19,7 @@ var BBLog = {
      *
      * @type String
      */
-    version: '4.9.3',
+    version: '4.9.4',
     build: '',
 
     /**
@@ -28,93 +28,94 @@ var BBLog = {
      * @type Array
      */
     configKeys: [
-        {"key": 'general.inlineyoutube', "init": 1, "group": "general"},
-        {"key": 'general.inlineimages', "init": 1, "group": "general"},
-        {"key": 'general.linkintext', "init": 1, "group": "general"},
-        {"key": 'general.feed.boardurl.last', "init": 1, "group": "general"},
-        {"key": 'general.server.filterset', "init": 1, "group": "general"},
-        {"key": 'general.server.markfavorites', "sections": {"mohw": 1, "bf3": 1}, "init": 1, "group": "general"},
-        {"key": 'general.server.hiddeninfo', "init": 1, "group": "general"},
-        {"key": 'general.mainserverbrowser', "sections": {"mohw": 1, "bf3": 1}, "init": 1, "group": "general"},
-        {"key": 'general.contextmenu.serverbrowser', "init": 1, "group": "general"},
-        {"key": 'general.contextmenu.serverpage', "sections": {"mohw": 1, "bf3": 1}, "init": 1, "group": "general"},
-        {"key": 'bf3.contextmenu.report', "init": 1, "group": "general"},
-        {"key": 'general.emblemeditor', "init": 1, "group": "general"},
-        {"key": 'general.emblems', "init": 1, "group": "general"},
-        {"key": 'general.delayed.contextmenu', "init": 0, "group": "general"},
-        {"key": 'general.radar.soldier.sound', "init": 0, "group": "general"},
-        {"key": 'general.focus.serverlist', "init": 0, "group": "general"},
-        {"key": 'general.remove.unsupportedbrowser', "init": 0, "group": "general"},
-        {"key": 'general.scoreboard.tags', "init": 1, "group": "general"},
-        {"key": 'general.background', "init": 1, 'button': 'background', "group": "general"},
-        {"key": 'general.themes', "init": 1, 'button': 'themes', "group": "general"},
-        {"key": 'general.plugins', "init": 1, 'button': 'plugins', "group": "general"},
-        {"key": 'general.plugingallery', "init": 1, 'button': 'plugingallery', "group": "general"},
-        {"key": 'general.radar.soldier', "init": 1, 'button': 'radar', 'type': 'soldier', "group": "general"},
-        {"key": 'general.radar.server', "init": 1, 'button': 'radar', 'type': 'server', "group": "general"},
-        {"key": 'general.local.comments', "init": 1, 'button': 'comments', "group": "general"},
-        {"key": 'board.gotolastpost', "init": 1, "group": "board"},
-        {"key": 'board.copybreadcrumps', "init": 1, "group": "board"},
-        {"key": 'board.linksblank', "init": 1, "group": "board"},
-        {"key": 'board.favthreads.autoadd', "sections": {"mohw": 1, "bf3": 1}, "init": 1, "group": "board"},
-        {"key": 'board.contextmenu.quote', "init": 1, "group": "board"},
-        {"key": 'board.contextmenu.radar', "init": 1, "group": "board"},
-        {"key": 'board.gototop', "sections": {"mohw": 1, "bf3": 1}, "init": 1, "group": "board"},
-        {"key": 'board.collapsequotes', "init": 1, "group": "board"},
-        {"key": 'board.radar', "init": 1, 'button': 'radar', 'type': 'board', "group": "board"},
-        {"key": 'board.signature', "init": 1, 'button': 'signature', "group": "board"},
+        { "key": 'general.inlineyoutube', "init": 1, "group": "general" },
+        { "key": 'general.inlineimages', "init": 1, "group": "general" },
+        { "key": 'general.linkintext', "init": 1, "group": "general" },
+        { "key": 'general.feed.boardurl.last', "init": 1, "group": "general" },
+        { "key": 'general.server.filterset', "init": 1, "group": "general" },
+        { "key": 'general.server.markfavorites', "sections": { "mohw": 1, "bf3": 1 }, "init": 1, "group": "general" },
+        { "key": 'general.server.hiddeninfo', "init": 1, "group": "general" },
+        { "key": 'general.mainserverbrowser', "sections": { "mohw": 1, "bf3": 1 }, "init": 1, "group": "general" },
+        { "key": 'general.contextmenu.serverbrowser', "init": 1, "group": "general" },
+        { "key": 'general.contextmenu.serverpage', "sections": { "mohw": 1, "bf3": 1 }, "init": 1, "group": "general" },
+        { "key": 'bf3.contextmenu.report', "init": 1, "group": "general" },
+        { "key": 'general.emblemeditor', "init": 1, "group": "general" },
+        { "key": 'general.emblems', "init": 1, "group": "general" },
+        { "key": 'general.delayed.contextmenu', "init": 0, "group": "general" },
+        { "key": 'general.radar.soldier.sound', "init": 0, "group": "general" },
+        { "key": 'general.focus.serverlist', "init": 0, "group": "general" },
+        { "key": 'general.remove.unsupportedbrowser', "init": 0, "group": "general" },
+        { "key": 'general.scoreboard.tags', "init": 1, "group": "general" },
+        { "key": 'general.background', "init": 1, 'button': 'background', "group": "general" },
+        { "key": 'general.themes', "init": 1, 'button': 'themes', "group": "general" },
+        { "key": 'general.plugins', "init": 1, 'button': 'plugins', "group": "general" },
+        { "key": 'general.plugingallery', "init": 1, 'button': 'plugingallery', "group": "general" },
+        { "key": 'general.radar.soldier', "init": 1, 'button': 'radar', 'type': 'soldier', "group": "general" },
+        { "key": 'general.radar.server', "init": 1, 'button': 'radar', 'type': 'server', "group": "general" },
+        { "key": 'general.local.comments', "init": 1, 'button': 'comments', "group": "general" },
+        { "key": 'board.gotolastpost', "init": 1, "group": "board" },
+        { "key": 'board.copybreadcrumps', "init": 1, "group": "board" },
+        { "key": 'board.linksblank', "init": 1, "group": "board" },
+        { "key": 'board.favthreads.autoadd', "sections": { "mohw": 1, "bf3": 1 }, "init": 1, "group": "board" },
+        { "key": 'board.contextmenu.quote', "init": 1, "group": "board" },
+        { "key": 'board.contextmenu.radar', "init": 1, "group": "board" },
+        { "key": 'board.gototop', "sections": { "mohw": 1, "bf3": 1 }, "init": 1, "group": "board" },
+        { "key": 'board.collapsequotes', "init": 1, "group": "board" },
+        { "key": 'board.radar', "init": 1, 'button': 'radar', 'type': 'board', "group": "board" },
+        { "key": 'board.signature', "init": 1, 'button': 'signature', "group": "board" },
         {
             "key": 'board.favthreads.add',
-            "sections": {"mohw": 1, "bf3": 1},
+            "sections": { "mohw": 1, "bf3": 1 },
             "init": 1,
             'button': 'favorites',
             "group": "board"
         },
-        {"key": 'bf3.weapons.list.filters', "init": 1, "sections": {"bf3": 1}, "group": "bf3"},
-        {"key": 'bf3.weapons.list.extradata', "init": 1, "sections": {"bf3": 1}, "group": "bf3"},
-        {"key": 'bf3.weapons.list.bf3stats', "init": 1, "sections": {"bf3": 1}, "group": "bf3"},
-        {"key": 'bf3.weapons.info', "init": 1, "sections": {"bf3": 1}, "group": "bf3"},
-        {"key": 'bf3.weapons.altSort', "init": 0, "sections": {"bf3": 1}, "group": "bf3"},
-        {"key": 'bf3.vehicle.list.filters', "init": 1, "sections": {"bf3": 1}, "group": "bf3"},
-        {"key": 'bf3.vehicle.list.extradata', "init": 1, "sections": {"bf3": 1}, "group": "bf3"},
-        {"key": 'bf3.vehicle.list.bf3stats', "init": 1, "sections": {"bf3": 1}, "group": "bf3"},
-        {"key": 'bf3.vehicle.altSort', "init": 0, "sections": {"bf3": 1}, "group": "bf3"},
-        {"key": 'bf3.assignments.bblog', "init": 1, "sections": {"bf3": 1}, "group": "bf3"},
-        {"key": 'bf3.awards.optimize', "init": 1, "sections": {"bf3": 1}, "group": "bf3"},
-        {"key": 'bf3.reports.bf3stats', "init": 1, "sections": {"bf3": 1}, "group": "bf3"},
-        {"key": 'bf3.reports.download', "init": 1, "sections": {"bf3": 1}, "group": "bf3"},
-        {"key": 'bf3.stats.higherlevel', "init": 1, "sections": {"bf3": 1}, "group": "bf3"},
-        {"key": 'bf3.stats.bf3stats', "init": 1, "sections": {"bf3": 1}, "group": "bf3"},
-        {"key": 'bf3.dogtags.counter', "init": 1, "sections": {"bf3": 1}, "group": "bf3"},
-        {"key": 'bf3.dogtags.noanimation', "init": 1, "sections": {"bf3": 1}, "group": "bf3"},
-        {"key": 'bf4.weapons.list.filters', "init": 1, "sections": {"bf4": 1}, "group": "bf4"},
-        {"key": 'bf4.weapons.list.sort', "init": 1, "sections": {"bf4": 1}, "group": "bf4"},
-        {"key": 'bf4.weapons.info', "init": 1, "sections": {"bf4": 1}, "group": "bf4"},
-        {"key": 'bf4.vehicle.list.filters', "init": 1, "sections": {"bf4": 1}, "group": "bf4"},
-        {"key": 'bf4.vehicle.list.sort', "init": 1, "sections": {"bf4": 1}, "group": "bf4"},
-        {"key": 'bf4.stats.higherlevel', "init": 1, "sections": {"bf4": 1}, "group": "bf4"},
-        {"key": 'bf4.serverbrowser.data', "init": 1, "sections": {"bf4": 1}, "group": "bf4"},
-        {"key": 'bf4.serverbrowser.livescore', "init": 1, "sections": {"bf4": 1}, "group": "bf4"},
-        {"key": 'bf4.stats.bf4stats', "init": 1, "sections": {"bf4": 1}, "group": "bf4"},
-        {"key": 'bf4.weapons.list.bf4stats', "init": 1, "sections": {"bf4": 1}, "group": "bf4"},
-        {"key": 'bf4.vehicle.list.bf4stats', "init": 1, "sections": {"bf4": 1}, "group": "bf4"},
-        {"key": 'bf4.unlocks.improvements', "init": 1, "sections": {"bf4": 1}, "group": "bf4"},
-        {"key": 'bf4.assignments.improvements', "init": 1, "sections": {"bf4": 1}, "group": "bf4"},
-        {"key": 'bf4.awards.improvements', "init": 1, "sections": {"bf4": 1}, "group": "bf4"},
-        {"key": 'bfh.weapons.info', "init": 1, "sections": {"bfh": 1}, "group": "bfh"},
-        {"key": 'bfh.stats.bfhstats', "init": 1, "sections": {"bfh": 1}, "group": "bfh"},
-        {"key": 'bfh.weapons.list.bfhstats', "init": 1, "sections": {"bfh": 1}, "group": "bfh"},
-        {"key": 'bfh.weapons.list.filters', "init": 1, "sections": {"bfh": 1}, "group": "bfh"},
-        {"key": 'bfh.vehicle.list.bfhstats', "init": 1, "sections": {"bfh": 1}, "group": "bfh"},
-        {"key": 'bfh.vehicle.list.filters', "init": 1, "sections": {"bfh": 1}, "group": "bfh"},
-        {"key": 'bfh.stats.higherlevel', "init": 1, "sections": {"bfh": 1}, "group": "bfh"},
-        {"key": 'bfh.awards.improvements', "init": 1, "sections": {"bfh": 1}, "group": "bfh"},
-        {"key": 'bfh.progression.improvements', "init": 1, "sections": {"bfh": 1}, "group": "bfh"},
-        {"key": 'mohw.stats.mohwstats', "init": 1, "sections": {"mohw": 1}, "group": "mohw"},
-        {"key": 'bblog.mark.team', "init": 1, "group": "bblog"},
-        {"key": 'bblog.click', "init": 0, "group": "bblog"},
-        {"key": 'bblog.board', "init": 1, "group": "bblog"},
-        {"key": 'bblog.teamspeak', "init": 1, "group": "bblog"}
+        { "key": 'bf3.weapons.list.filters', "init": 1, "sections": { "bf3": 1 }, "group": "bf3" },
+        { "key": 'bf3.weapons.list.extradata', "init": 1, "sections": { "bf3": 1 }, "group": "bf3" },
+        { "key": 'bf3.weapons.list.bf3stats', "init": 0, "sections": { "bf3": 1 }, "group": "bf3" },
+        { "key": 'bf3.weapons.info', "init": 1, "sections": { "bf3": 1 }, "group": "bf3" },
+        { "key": 'bf3.weapons.altSort', "init": 0, "sections": { "bf3": 1 }, "group": "bf3" },
+        { "key": 'bf3.vehicle.list.filters', "init": 1, "sections": { "bf3": 1 }, "group": "bf3" },
+        { "key": 'bf3.vehicle.list.extradata', "init": 1, "sections": { "bf3": 1 }, "group": "bf3" },
+        { "key": 'bf3.vehicle.list.bf3stats', "init": 0, "sections": { "bf3": 1 }, "group": "bf3" },
+        { "key": 'bf3.vehicle.altSort', "init": 0, "sections": { "bf3": 1 }, "group": "bf3" },
+        { "key": 'bf3.assignments.bblog', "init": 1, "sections": { "bf3": 1 }, "group": "bf3" },
+        { "key": 'bf3.awards.optimize', "init": 1, "sections": { "bf3": 1 }, "group": "bf3" },
+        { "key": 'bf3.reports.bf3stats', "init": 0, "sections": { "bf3": 1 }, "group": "bf3" },
+        { "key": 'bf3.reports.download', "init": 1, "sections": { "bf3": 1 }, "group": "bf3" },
+        { "key": 'bf3.stats.higherlevel', "init": 1, "sections": { "bf3": 1 }, "group": "bf3" },
+        { "key": 'bf3.stats.bf3stats', "init": 0, "sections": { "bf3": 1 }, "group": "bf3" },
+        { "key": 'bf3.dogtags.counter', "init": 1, "sections": { "bf3": 1 }, "group": "bf3" },
+        { "key": 'bf3.dogtags.noanimation', "init": 1, "sections": { "bf3": 1 }, "group": "bf3" },
+        { "key": 'bf4.weapons.list.filters', "init": 1, "sections": { "bf4": 1 }, "group": "bf4" },
+        { "key": 'bf4.weapons.list.sort', "init": 1, "sections": { "bf4": 1 }, "group": "bf4" },
+        { "key": 'bf4.weapons.info', "init": 1, "sections": { "bf4": 1 }, "group": "bf4" },
+        { "key": 'bf4.vehicle.list.filters', "init": 1, "sections": { "bf4": 1 }, "group": "bf4" },
+        { "key": 'bf4.vehicle.list.sort', "init": 1, "sections": { "bf4": 1 }, "group": "bf4" },
+        { "key": 'bf4.stats.higherlevel', "init": 1, "sections": { "bf4": 1 }, "group": "bf4" },
+        { "key": 'bf4.serverbrowser.data', "init": 1, "sections": { "bf4": 1 }, "group": "bf4" },
+        { "key": 'bf4.serverbrowser.truecounts', "init": 1, "sections": { "bf4": 1 }, "group": "bf4" },
+        { "key": 'bf4.serverbrowser.livescore', "init": 1, "sections": { "bf4": 1 }, "group": "bf4" },
+        { "key": 'bf4.stats.bf4stats', "init": 0, "sections": { "bf4": 1 }, "group": "bf4" },
+        { "key": 'bf4.weapons.list.bf4stats', "init": 0, "sections": { "bf4": 1 }, "group": "bf4" },
+        { "key": 'bf4.vehicle.list.bf4stats', "init": 0, "sections": { "bf4": 1 }, "group": "bf4" },
+        { "key": 'bf4.unlocks.improvements', "init": 1, "sections": { "bf4": 1 }, "group": "bf4" },
+        { "key": 'bf4.assignments.improvements', "init": 1, "sections": { "bf4": 1 }, "group": "bf4" },
+        { "key": 'bf4.awards.improvements', "init": 1, "sections": { "bf4": 1 }, "group": "bf4" },
+        { "key": 'bfh.weapons.info', "init": 1, "sections": { "bfh": 1 }, "group": "bfh" },
+        { "key": 'bfh.stats.bfhstats', "init": 0, "sections": { "bfh": 1 }, "group": "bfh" },
+        { "key": 'bfh.weapons.list.bfhstats', "init": 0, "sections": { "bfh": 1 }, "group": "bfh" },
+        { "key": 'bfh.weapons.list.filters', "init": 1, "sections": { "bfh": 1 }, "group": "bfh" },
+        { "key": 'bfh.vehicle.list.bfhstats', "init": 0, "sections": { "bfh": 1 }, "group": "bfh" },
+        { "key": 'bfh.vehicle.list.filters', "init": 1, "sections": { "bfh": 1 }, "group": "bfh" },
+        { "key": 'bfh.stats.higherlevel', "init": 1, "sections": { "bfh": 1 }, "group": "bfh" },
+        { "key": 'bfh.awards.improvements', "init": 1, "sections": { "bfh": 1 }, "group": "bfh" },
+        { "key": 'bfh.progression.improvements', "init": 1, "sections": { "bfh": 1 }, "group": "bfh" },
+        { "key": 'mohw.stats.mohwstats', "init": 0, "sections": { "mohw": 1 }, "group": "mohw" },
+        { "key": 'bblog.mark.team', "init": 1, "group": "bblog" },
+        { "key": 'bblog.click', "init": 0, "group": "bblog" },
+        { "key": 'bblog.board', "init": 1, "group": "bblog" },
+        { "key": 'bblog.teamspeak', "init": 1, "group": "bblog" }
     ],
 
     /**
@@ -352,7 +353,7 @@ var BBLog = {
         } else if (typeof MutationObserver != "undefined") {
             observer = new MutationObserver(mutationHandler);
         }
-        observer.observe(document.body, {childList: true, subtree: true});
+        observer.observe(document.body, { childList: true, subtree: true });
         // click handler
         $(document).on("click", function () {
             $("#bblog-options").remove();
@@ -377,7 +378,7 @@ var BBLog = {
 
             var username = BBLog.cache("account.name");
             if (BBLog.searchInObject(data.team, null, username)) {
-                BBLog.configKeys.push({"key": "developer.language", "init": 0, "group": "bblog"});
+                BBLog.configKeys.push({ "key": "developer.language", "init": 0, "group": "bblog" });
             }
         }
 
@@ -482,12 +483,12 @@ var BBLog = {
                     var e = $('<div id="bblog-sidebar" style="left:-' + $(this).width() + 'px"><div class="inner"><div class="scrollArea"></div></div></div>');
                     if (!$("#bblog-sidebar-help").length) $("body").append('<div id="bblog-sidebar-help"><div class="inner"></div></div>');
                     $("body").append(e);
-                    e.animate({left: 0}, 200);
+                    e.animate({ left: 0 }, 200);
 
                     $(document).on("mousemove.bblog", function (ev) {
                         if (!$("#bblog-sidebar").length) return;
                         if (ev.pageX > $("#bblog-sidebar").width() + 20) {
-                            $("#bblog-sidebar").animate({left: -$("#bblog-sidebar").width()}, 200, function () {
+                            $("#bblog-sidebar").animate({ left: -$("#bblog-sidebar").width() }, 200, function () {
                                 $(this).remove();
                             });
                         }
@@ -537,7 +538,7 @@ var BBLog = {
                                 var a = document.createElement("a");
                                 var download = function (data, fileName) {
                                     var json = JSON.stringify(data),
-                                        blob = new Blob([json], {type: "octet/stream"}),
+                                        blob = new Blob([json], { type: "octet/stream" }),
                                         url = window.URL.createObjectURL(blob);
                                     a.href = url;
                                     a.download = fileName;
@@ -626,7 +627,7 @@ var BBLog = {
                         var key = $(this).attr("data-key");
                         var value = set ? 1 : 0;
                         BBLog.storage(key, value);
-                        BBLog.handle("onchange.config", {'key': key, 'value': value});
+                        BBLog.handle("onchange.config", { 'key': key, 'value': value });
                     });
                     cont.find("[data-help]").on("mouseenter", function () {
                         $("#bblog-sidebar-help").stop().css("top", $(this).offset().top).children().html($(this).attr("data-help"));
@@ -709,7 +710,7 @@ var BBLog = {
                     if (e.keyCode == 13) {
                         var url = $.trim(this.value);
                         if (url.match(/^http.*\.json/)) {
-                            data.sourceStorage.push({"url": url});
+                            data.sourceStorage.push({ "url": url });
                             BBLog.storage(data.sourceStorageKey, data.sourceStorage);
                             data.loadPopup();
                             base.showReceipt(BBLog.t("reload.required") + " (F5)");
@@ -904,7 +905,7 @@ var BBLog = {
                         if (ev.keyCode == 13) {
                             var url = $.trim(this.value);
                             if (url.match(/^http.*/)) {
-                                storage.push({"url": $.trim(url), "active": 1});
+                                storage.push({ "url": $.trim(url), "active": 1 });
                                 BBLog.storage(storageKey, storage);
                                 base.showReceipt(BBLog.t("reload.required") + " (F5)");
                                 data.loadPopup();
@@ -964,7 +965,7 @@ var BBLog = {
                         var url = $.trim(this.value);
                         if (url.match(/^http.*/)) {
                             var storage = BBLog.storage(storageKey) || [];
-                            storage.push({"url": $.trim(url), "active": 1});
+                            storage.push({ "url": $.trim(url), "active": 1 });
                             BBLog.storage(storageKey, storage);
                             base.showReceipt(BBLog.t("reload.required") + " (F5)");
                             data.loadPopup();
@@ -1187,7 +1188,7 @@ var BBLog = {
                     for (var i in data.configFlags) {
                         var d = data.configFlags[i];
                         if (typeof d[0] != "undefined") {
-                            var newD = {key: d[0], init: d[1]};
+                            var newD = { key: d[0], init: d[1] };
                             if (typeof d[2] != "undefined") newD.handler = d[2];
                             d = newD;
                         }
@@ -1268,7 +1269,7 @@ var BBLog = {
                         case "radar.soldier":
                         case "radar.server":
                             var keyAs = "id";
-                            var params = {"name": "name"};
+                            var params = { "name": "name" };
                             break;
                         case "radar.board":
                             var keyAs = "name";
@@ -1280,7 +1281,7 @@ var BBLog = {
                     var storage = BBLog.cache(storageKey) || [];
                     data = data.list;
                     for (var i in data) {
-                        var pushData = {'fromsource': true, "source": BBLog.cache("mode")};
+                        var pushData = { 'fromsource': true, "source": BBLog.cache("mode") };
                         pushData[keyAs] = i;
                         for (var p in params) pushData[params[p]] = data[i][p];
                         storage.push(pushData);
@@ -1378,6 +1379,94 @@ var BBLog = {
                 var score = parseInt($(".box-footer.cash").find(".box-stats-value").first().text().replace(/[^0-9]/ig, ""));
                 var rank = Math.floor(score / 100000);
                 e.find(".bfh-rank").append('<div class="bblog-rank">(' + BBLog.t("bblog.rank") + ' ' + rank + ')</div>').attr("data-tooltip", BBLog.t("bblog.rank.info"));
+                break;
+            case "bf4.serverbrowser.truecounts":
+                if (BBLog.cache("mode") != "bf4" || !serverbrowserwarsaw || !serverbrowserwarsaw.table) return this.callback();
+                var e = serverbrowserwarsaw.table;
+
+                e.find("tbody .server-row").each(function () {
+                    let $self = $(this)
+                    if ($(this).find("td.players").hasClass("bblog-serverbrowser-playercounts-ignore")) return true;
+
+                    $(this).addClass("bblog-serverbrowser-playercounts")
+                    var server = $(this).data("server");
+                    if (!server) return true;
+
+                    var url = S.globalContext.staticContext.keeperQueryEndpoint + "/snapshot/" + server.guid;
+                    $.get(url, function (receievedQueryInfo) {
+                        try {
+                            if (typeof receievedQueryInfo === "object" && receievedQueryInfo.snapshot) {
+                                let totalPlayers = 0
+                                let inQueue = 0
+                                if (!receievedQueryInfo.snapshot.teamInfo) return;
+    
+                                Object.keys(receievedQueryInfo.snapshot.teamInfo).forEach(function (key) {
+                                    if (key == 0) {
+                                        inQueue += Object.keys(receievedQueryInfo.snapshot.teamInfo[key].players).length
+                                    }
+                                    else {
+                                        totalPlayers += Object.keys(receievedQueryInfo.snapshot.teamInfo[key].players).length
+                                    }
+                                });
+                                server.slots[5] = {
+                                    current: totalPlayers,
+                                    max: server.slots[2].max
+                                }
+                                if (!$self.find(".bblog-slots.truecount").length) {
+                                    let content = '<div class="bblog-slots truecount">' + server.slots[5].current + "/" + server.slots[5].max + '</div>'
+                                    if ($self.find(".bblog-slots.commander").length) {
+                                        $self.find(".bblog-slots.commander").before(content);
+                                    }
+                                    else if ($self.find(".bblog-slots.spectator").length) {
+                                        $self.find(".bblog-slots.spectator").before(content);
+                                    }
+                                    else {
+                                        $self.find("td.players").append(content);
+                                    }
+                                }
+                                else {
+                                    $self.find(".bblog-slots.truecount").html(content);
+                                }
+    
+                                var difference = Math.abs(server.slots[2].current - server.slots[5].current);
+                                let differenceClass = (difference <= 2 ? 'low' : difference <= 5 ? 'mid' : 'high')
+
+                                $self.find(".bblog-slots.truecount").addClass(differenceClass);
+                                $self.find(".bblog-slots.truecount").css("font-size", "12px");
+                            }
+                        }
+                        catch (error) {
+                            console.error(error);
+                        }
+                    }).fail(function () {
+                        console.log("UNKNOWN_ERROR");
+                    }).always(function () {
+                        $self.find("td.players").addClass("bblog-serverbrowser-playercounts-ignore")
+                    });
+                });
+
+                if (BBLog.elementCheck(e, action)) return this.callback();
+
+                var last = e.find("th.server-info a[data-sort]").last();
+                last.after($('<a href="#" data-sort="truecounts" class="ignored-trigger-el">True Counts</a>').data("sort", "truecounts")).after(', ');
+
+                if (typeof serverbrowserwarsaw.sorter._refreshSortingsTPC == "undefined") {
+                    serverbrowserwarsaw.sorter._refreshSortingsTPC = serverbrowserwarsaw.sorter.refreshSortings;
+                    serverbrowserwarsaw.sorter.refreshSortings = function () {
+                        serverbrowserwarsaw.sorter._refreshSortingsTPC();
+                        var ASC = false;
+                        var DESC = !ASC;
+                        serverbrowserwarsaw.sorter.sortings.truecounts = {
+                            defaultOrder: DESC,
+                            dataType: "server",
+                            sortFunc: function (server) {
+                                return server.slots[5] ? server.slots[5].current + server.slots[5].max / 1000 : -1;
+                            }
+                        };
+                    };
+                }
+                serverbrowserwarsaw.sorter.toggles.off("click.page.serverbrowser");
+                serverbrowserwarsaw.trigger("pageshow.sort");
                 break;
             case "bf4.serverbrowser.data":
                 if (BBLog.cache("mode") != "bf4" || !serverbrowserwarsaw || !serverbrowserwarsaw.table) return this.callback();
@@ -1636,7 +1725,7 @@ var BBLog = {
                             data.teams[index].entries.push(tmp);
                         });
                     });
-                    $.post(BBLog.serviceUrl + "/en/api/report.pdf", {"data": JSON.stringify(data)}, function (url) {
+                    $.post(BBLog.serviceUrl + "/en/api/report.pdf", { "data": JSON.stringify(data) }, function (url) {
                         var m = url.match(/^E([0-9])/);
                         if (m) {
                             switch (m[1]) {
@@ -1750,7 +1839,7 @@ var BBLog = {
                             setTimeout(function () {
                                 var hash = window.location.href.match(/\?(.*)/)[1];
                                 var filters = BBLog.storage(storageKey) || [];
-                                filters.push({name: text, "data": hash, "visible": true});
+                                filters.push({ name: text, "data": hash, "visible": true });
                                 BBLog.storage(storageKey, filters);
                             }, 200);
                         }
@@ -1914,57 +2003,57 @@ var BBLog = {
                 var assignments = {
                     //0 : {x : 0, y : 0, ready : false},
                     //1 : {x : 1, y : 0, ready : false},
-                    2: {x: 2, y: 0, ready: false},
-                    3: {x: 3, y: 0, ready: false},
-                    4: {x: 4, y: 0, ready: false},
-                    5: {x: 0, y: 1, ready: false},
-                    6: {x: 1, y: 1, ready: false},
-                    7: {x: 2, y: 1, ready: false},
-                    8: {x: 3, y: 1, ready: false},
-                    9: {x: 4, y: 1, ready: false},
-                    10: {x: 0, y: 2, ready: false},
-                    11: {x: 1, y: 2, ready: false},
-                    12: {x: 2, y: 2, ready: false},
-                    13: {x: 3, y: 2, ready: false},
-                    14: {x: 4, y: 2, ready: false},
-                    15: {x: 0, y: 3, ready: false}
+                    2: { x: 2, y: 0, ready: false },
+                    3: { x: 3, y: 0, ready: false },
+                    4: { x: 4, y: 0, ready: false },
+                    5: { x: 0, y: 1, ready: false },
+                    6: { x: 1, y: 1, ready: false },
+                    7: { x: 2, y: 1, ready: false },
+                    8: { x: 3, y: 1, ready: false },
+                    9: { x: 4, y: 1, ready: false },
+                    10: { x: 0, y: 2, ready: false },
+                    11: { x: 1, y: 2, ready: false },
+                    12: { x: 2, y: 2, ready: false },
+                    13: { x: 3, y: 2, ready: false },
+                    14: { x: 4, y: 2, ready: false },
+                    15: { x: 0, y: 3, ready: false }
                 };
-                assignments[2].requirements = {0: {need: 200, have: 0, perc: 0}};
-                assignments[3].requirements = {0: {need: 500, have: 0, perc: 0}};
-                assignments[4].requirements = {0: {need: 10000, have: 0, perc: 0}};
-                assignments[5].requirements = {0: {need: 5, have: 0, perc: 0}};
+                assignments[2].requirements = { 0: { need: 200, have: 0, perc: 0 } };
+                assignments[3].requirements = { 0: { need: 500, have: 0, perc: 0 } };
+                assignments[4].requirements = { 0: { need: 10000, have: 0, perc: 0 } };
+                assignments[5].requirements = { 0: { need: 5, have: 0, perc: 0 } };
                 assignments[6].requirements = {
-                    0: {need: 5, have: 0, perc: 0},
-                    1: {need: 5, have: 0, perc: 0}
+                    0: { need: 5, have: 0, perc: 0 },
+                    1: { need: 5, have: 0, perc: 0 }
                 };
-                assignments[7].requirements = {0: {need: 4, have: 0, perc: 0}};
-                assignments[8].requirements = {0: {need: 6, have: 0, perc: 0}};
-                assignments[9].requirements = {0: {need: 60, have: 0, perc: 0}};
-                assignments[10].requirements = {0: {need: 5000, have: 0, perc: 0}};
-                assignments[11].requirements = {0: {need: 1000, have: 0, perc: 0}};
+                assignments[7].requirements = { 0: { need: 4, have: 0, perc: 0 } };
+                assignments[8].requirements = { 0: { need: 6, have: 0, perc: 0 } };
+                assignments[9].requirements = { 0: { need: 60, have: 0, perc: 0 } };
+                assignments[10].requirements = { 0: { need: 5000, have: 0, perc: 0 } };
+                assignments[11].requirements = { 0: { need: 1000, have: 0, perc: 0 } };
                 assignments[12].requirements = {
-                    0: {need: 1, have: 0, perc: 0},
-                    1: {need: 1, have: 0, perc: 0},
-                    2: {need: 1, have: 0, perc: 0},
-                    3: {need: 1, have: 0, perc: 0},
-                    4: {need: 1, have: 0, perc: 0},
-                    5: {need: 1, have: 0, perc: 0},
-                    6: {need: 1, have: 0, perc: 0}
+                    0: { need: 1, have: 0, perc: 0 },
+                    1: { need: 1, have: 0, perc: 0 },
+                    2: { need: 1, have: 0, perc: 0 },
+                    3: { need: 1, have: 0, perc: 0 },
+                    4: { need: 1, have: 0, perc: 0 },
+                    5: { need: 1, have: 0, perc: 0 },
+                    6: { need: 1, have: 0, perc: 0 }
                 };
                 assignments[13].requirements = {
-                    0: {need: 100, have: 0, perc: 0},
-                    1: {need: 100, have: 0, perc: 0},
-                    2: {need: 100, have: 0, perc: 0},
-                    3: {need: 100, have: 0, perc: 0}
+                    0: { need: 100, have: 0, perc: 0 },
+                    1: { need: 100, have: 0, perc: 0 },
+                    2: { need: 100, have: 0, perc: 0 },
+                    3: { need: 100, have: 0, perc: 0 }
                 };
                 assignments[14].requirements = {
-                    0: {need: 250, have: 0, perc: 0},
-                    1: {need: 250, have: 0, perc: 0},
-                    2: {need: 250, have: 0, perc: 0},
-                    3: {need: 250, have: 0, perc: 0},
-                    4: {need: 250, have: 0, perc: 0}
+                    0: { need: 250, have: 0, perc: 0 },
+                    1: { need: 250, have: 0, perc: 0 },
+                    2: { need: 250, have: 0, perc: 0 },
+                    3: { need: 250, have: 0, perc: 0 },
+                    4: { need: 250, have: 0, perc: 0 }
                 };
-                assignments[15].requirements = {0: {need: 20, have: 0, perc: 0}};
+                assignments[15].requirements = { 0: { need: 20, have: 0, perc: 0 } };
                 // dogtags
                 BBLog.handle("json.from.battlelog", {
                     url: dogtagsHref, callback: function (data) {
@@ -2348,12 +2437,12 @@ var BBLog = {
                     $("#bblog-sidebar").remove();
                     var e = $('<div id="bblog-sidebar" style="left:-' + $(this).width() + 'px"><div class="inner"><div class="scrollArea"></div></div></div>');
                     $("body").append(e);
-                    e.animate({left: 0}, 200);
+                    e.animate({ left: 0 }, 200);
 
                     $(document).on("mousemove.bblog", function (ev) {
                         if (!$("#bblog-sidebar").length) return;
                         if (ev.pageX > $("#bblog-sidebar").width() + 20) {
-                            $("#bblog-sidebar").animate({left: -$("#bblog-sidebar").width()}, 200, function () {
+                            $("#bblog-sidebar").animate({ left: -$("#bblog-sidebar").width() }, 200, function () {
                                 $(this).remove();
                             });
                         }
@@ -2657,14 +2746,14 @@ var BBLog = {
                     var t = found === null ? "radar.addserver" : "radar.removeserver";
                     $("#bblog-contextmenu").html(
                         $('<div>').text(BBLog.t(t)).on("click", function () {
-                                if (found !== null) {
-                                    delete storage[found];
-                                } else {
-                                    storage.push({"id": id, "name": name, "source": BBLog.cache("mode")});
-                                }
-                                BBLog.storage(key, storage);
-                                $("#bblog-contextmenu").hide();
+                            if (found !== null) {
+                                delete storage[found];
+                            } else {
+                                storage.push({ "id": id, "name": name, "source": BBLog.cache("mode") });
                             }
+                            BBLog.storage(key, storage);
+                            $("#bblog-contextmenu").hide();
+                        }
                         )).trigger("show", [ev]);
                     if (BBLog.customContextable()) ev.preventDefault();
                 });
@@ -2680,14 +2769,14 @@ var BBLog = {
                     var t = found === null ? "radar.addsoldier" : "radar.removesoldier";
                     $("#bblog-contextmenu").html(
                         $('<div>').text(BBLog.t(t)).on("click", function () {
-                                if (found !== null) {
-                                    delete storage[found];
-                                } else {
-                                    storage.push({"id": id, "name": name, "source": BBLog.cache("mode")});
-                                }
-                                BBLog.storage(key, storage);
-                                $("#bblog-contextmenu").hide();
+                            if (found !== null) {
+                                delete storage[found];
+                            } else {
+                                storage.push({ "id": id, "name": name, "source": BBLog.cache("mode") });
                             }
+                            BBLog.storage(key, storage);
+                            $("#bblog-contextmenu").hide();
+                        }
                         )).trigger("show", [ev]);
                     if (BBLog.customContextable()) ev.preventDefault();
                 });
@@ -3055,16 +3144,16 @@ var BBLog = {
                                 $('<input type="text" value="" maxlength="30"/>')
                                     .attr("data-tooltip", BBLog.t("general.emblems.tag.suggest"))
                                     .on("keyup blur", function (ev) {
-                                            this.value = slugTag(this.value);
-                                            if (ev && ev.keyCode && ev.keyCode == 13 && this.value.length > 2) {
-                                                $(this).next(".message").text('Tag saved').stop(true).css("opacity", 1).show().fadeOut(2000);
-                                                var v = this.value;
-                                                var postData = {id: html.attr("data-id"), tag: v};
-                                                $.extend(postData, basicPostData);
-                                                $.post(BBLog.serviceUrl + "/" + BBLog.cache("language") + "/api/emblems.tag", postData);
-                                                this.value = "";
-                                            }
+                                        this.value = slugTag(this.value);
+                                        if (ev && ev.keyCode && ev.keyCode == 13 && this.value.length > 2) {
+                                            $(this).next(".message").text('Tag saved').stop(true).css("opacity", 1).show().fadeOut(2000);
+                                            var v = this.value;
+                                            var postData = { id: html.attr("data-id"), tag: v };
+                                            $.extend(postData, basicPostData);
+                                            $.post(BBLog.serviceUrl + "/" + BBLog.cache("language") + "/api/emblems.tag", postData);
+                                            this.value = "";
                                         }
+                                    }
                                     ));
                             html.append('<div class="message">');
                             html.append($('<div style="text-align:center">').append($(this).children().clone(true)));
@@ -3221,17 +3310,17 @@ var BBLog = {
                     $('<div class="box-content bblog-emblem-info">')
                         .html(BBLog.t("general.emblemeditor.text").replace(/\n/ig, "<br/>") + "<br/><br/>")
                         .append('<input type="file" accept="image/*" id="bblog-emblem-file"/>').on("change", function (ev) {
-                        var reader = new FileReader();
-                        reader.onload = (function (theFile) {
-                            return function (e) {
-                                if (!$("#bblog-canvas-container").length) $("#emblem-canvas").before('<div id="bblog-canvas-container">');
-                                $("#bblog-canvas-container").css("background-image", "url('" + e.target.result + "')");
-                                $("#bblog-emblem-file").trigger("blur");
-                                $("#emblem-canvas").css("opacity", 0.5);
-                            };
-                        })(f);
-                        reader.readAsDataURL(ev.target.files[0]);
-                    })
+                            var reader = new FileReader();
+                            reader.onload = (function (theFile) {
+                                return function (e) {
+                                    if (!$("#bblog-canvas-container").length) $("#emblem-canvas").before('<div id="bblog-canvas-container">');
+                                    $("#bblog-canvas-container").css("background-image", "url('" + e.target.result + "')");
+                                    $("#bblog-emblem-file").trigger("blur");
+                                    $("#emblem-canvas").css("opacity", 0.5);
+                                };
+                            })(f);
+                            reader.readAsDataURL(ev.target.files[0]);
+                        })
                 );
 
                 $("header.layers-count").parent().before('<div class="box" id="bblog-emblem-options"><header><h1>' + BBLog.t("general.emblemeditor.ld.title") + '</h1></header><div class="box-content"></div></div>');
@@ -3311,14 +3400,14 @@ var BBLog = {
                     var t = found === null ? "radar.addsoldier" : "radar.removesoldier";
                     $("#bblog-contextmenu").html(
                         $('<div>').text(BBLog.t(t)).on("click", function () {
-                                if (found !== null) {
-                                    delete storage[found];
-                                } else {
-                                    storage.push({"id": id, "name": name, "source": BBLog.cache("mode")});
-                                }
-                                BBLog.storage(key, storage);
-                                $("#bblog-contextmenu").hide();
+                            if (found !== null) {
+                                delete storage[found];
+                            } else {
+                                storage.push({ "id": id, "name": name, "source": BBLog.cache("mode") });
                             }
+                            BBLog.storage(key, storage);
+                            $("#bblog-contextmenu").hide();
+                        }
                         )).trigger("show", [ev]);
                     if (BBLog.customContextable()) ev.preventDefault();
                 });
@@ -3332,10 +3421,10 @@ var BBLog = {
                     if (selection) {
                         $("#bblog-contextmenu").html(
                             $('<div>').text(BBLog.t("contextmenu.quote")).on("click", function () {
-                                    e.find("textarea").trigger("focus").append('\n[quote]' + selection + '[/quote]');
-                                    window.scrollTo(0, e.offset().top);
-                                    $("#bblog-contextmenu").hide();
-                                }
+                                e.find("textarea").trigger("focus").append('\n[quote]' + selection + '[/quote]');
+                                window.scrollTo(0, e.offset().top);
+                                $("#bblog-contextmenu").hide();
+                            }
                             )).trigger("show", [ev]);
                         if (BBLog.customContextable()) ev.preventDefault();
                     }
@@ -3351,14 +3440,14 @@ var BBLog = {
                     var t = found === null ? "radar.addboarduser" : "radar.removeboarduser";
                     $("#bblog-contextmenu").html(
                         $('<div>').text(BBLog.t(t)).on("click", function () {
-                                if (found !== null) {
-                                    delete storage[found];
-                                } else {
-                                    storage.push({"name": name, "source": BBLog.cache("mode")});
-                                }
-                                BBLog.storage(key, storage);
-                                $("#bblog-contextmenu").hide();
+                            if (found !== null) {
+                                delete storage[found];
+                            } else {
+                                storage.push({ "name": name, "source": BBLog.cache("mode") });
                             }
+                            BBLog.storage(key, storage);
+                            $("#bblog-contextmenu").hide();
+                        }
                         )).trigger("show", [ev]);
                     if (BBLog.customContextable()) ev.preventDefault();
                 });
@@ -3708,7 +3797,7 @@ var BBLog = {
                 var e = $("#profile-stats-fetch-url .box").first();
                 if (!e.length) return this.callback();
                 var e2 = $("#dogtags-filter li[data-filter].active").first();
-                if (BBLog.elementCheck(e, action))  return this.callback();
+                if (BBLog.elementCheck(e, action)) return this.callback();
 
                 var e2 = $("#dogtags-filter li[data-filter]").on("click", function () {
                     $("#profile-stats-fetch-url").find(".span8 .box").trigger("init");
@@ -3752,7 +3841,7 @@ var BBLog = {
                 if (!e.length || BBLog.elementCheck(e, action)) return this.callback();
                 var soldierInfo = $("div.profile-venicestats-header-soldier-info:first");
                 var soldier = soldierInfo.find(".profile-venicestats-header-soldier-info-name span").text();
-                var d = {"player": decodeURIComponent(soldier), "opt": "clear,ranking,weapons,weaponsRanking"};
+                var d = { "player": decodeURIComponent(soldier), "opt": "clear,ranking,weapons,weaponsRanking" };
                 var platform = soldierInfo.find(".profile-venicestats-header-soldier-info-type-game").attr("class").match(/common-game-[0-9]-([0-9]+).*/i)[1];
                 platform = BBLog.deviceInfo[parseInt(platform)];
                 if (platform == "xbox") platform = "360";
@@ -3780,7 +3869,7 @@ var BBLog = {
                 if (!e.length || BBLog.elementCheck(e, action)) return this.callback();
                 var soldierInfo = $("div.profile-venicestats-header-soldier-info:first");
                 var soldier = soldierInfo.find(".profile-venicestats-header-soldier-info-name span").text();
-                var d = {"player": decodeURIComponent(soldier), "opt": "clear,ranking,vehicles,vehiclesRanking"};
+                var d = { "player": decodeURIComponent(soldier), "opt": "clear,ranking,vehicles,vehiclesRanking" };
                 var platform = soldierInfo.find(".profile-venicestats-header-soldier-info-type-game").attr("class").match(/common-game-[0-9]-([0-9]+).*/i)[1];
                 platform = BBLog.deviceInfo[parseInt(platform)];
                 $.post("http://api.bf3stats.com/" + platform + "/player/", d, function (data) {
@@ -3828,7 +3917,7 @@ var BBLog = {
                         }
                     });
                 });
-                BBLog.handle("_bf3.vehicle.weapons.textfilter", {type: "weapon"});
+                BBLog.handle("_bf3.vehicle.weapons.textfilter", { type: "weapon" });
                 break;
             case "bf3.weapons.list.extradata":
                 var match = window.location.href.match(/soldier\/(.*?)\/weapons\/([0-9]+)\//);
@@ -3926,7 +4015,7 @@ var BBLog = {
                     }
                 });
                 e.find("h1:first").after(list);
-                BBLog.handle("_bf3.vehicle.weapons.textfilter", {type: "vehicle"});
+                BBLog.handle("_bf3.vehicle.weapons.textfilter", { type: "vehicle" });
                 break;
             case "bf3.vehicle.list.extradata":
                 var match = window.location.href.match(/soldier\/(.*?)\/vehicles\/([0-9]+)\//);
@@ -4683,7 +4772,7 @@ var BBLog = {
                     var sorter = e.find("table").data("tablesorter");
                     for (var i in sorts) {
                         var s = sorts[i];
-                        e.find(s.filter).css("position", "relative").on("mouseenter", {"s": s, "e": e}, function (ev) {
+                        e.find(s.filter).css("position", "relative").on("mouseenter", { "s": s, "e": e }, function (ev) {
                             var th = $(this);
                             if ($("#bblog-altersort").length) $("#bblog-altersort").remove();
                             var l = $(this).offset().left + 1;
@@ -4754,7 +4843,7 @@ var BBLog = {
         if (!BBLog.count(BBLog._storage)) BBLog._storage = {};
         if (typeof value != "undefined") {
             BBLog._storage[key] = value;
-            window.postMessage({action: "store", data: BBLog._storage}, "*");
+            window.postMessage({ action: "store", data: BBLog._storage }, "*");
             return null;
         }
         return (typeof BBLog._storage[key] != "undefined") ? BBLog._storage[key] : null;
