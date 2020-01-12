@@ -19,7 +19,7 @@ var BBLog = {
      *
      * @type String
      */
-    version: '4.9.4',
+    version: '4.9.5',
     build: '',
 
     /**
@@ -1381,92 +1381,99 @@ var BBLog = {
                 e.find(".bfh-rank").append('<div class="bblog-rank">(' + BBLog.t("bblog.rank") + ' ' + rank + ')</div>').attr("data-tooltip", BBLog.t("bblog.rank.info"));
                 break;
             case "bf4.serverbrowser.truecounts":
-                if (BBLog.cache("mode") != "bf4" || !serverbrowserwarsaw || !serverbrowserwarsaw.table) return this.callback();
-                var e = serverbrowserwarsaw.table;
+                try {
+                    if (BBLog.cache("mode") != "bf4" || !serverbrowserwarsaw || !serverbrowserwarsaw.table) return this.callback();
+                    var e = serverbrowserwarsaw.table;
 
-                e.find("tbody .server-row").each(function () {
-                    let $self = $(this)
-                    if ($(this).find("td.players").hasClass("bblog-serverbrowser-playercounts-ignore")) return true;
-
-                    $(this).addClass("bblog-serverbrowser-playercounts")
-                    var server = $(this).data("server");
-                    if (!server) return true;
-
-                    var url = S.globalContext.staticContext.keeperQueryEndpoint + "/snapshot/" + server.guid;
-                    $.get(url, function (receievedQueryInfo) {
-                        try {
-                            if (typeof receievedQueryInfo === "object" && receievedQueryInfo.snapshot) {
-                                let totalPlayers = 0
-                                let inQueue = 0
-                                if (!receievedQueryInfo.snapshot.teamInfo) return;
-    
-                                Object.keys(receievedQueryInfo.snapshot.teamInfo).forEach(function (key) {
-                                    if (key == 0) {
-                                        inQueue += Object.keys(receievedQueryInfo.snapshot.teamInfo[key].players).length
-                                    }
-                                    else {
-                                        totalPlayers += Object.keys(receievedQueryInfo.snapshot.teamInfo[key].players).length
-                                    }
-                                });
-                                server.slots[5] = {
-                                    current: totalPlayers,
-                                    max: server.slots[2].max
-                                }
-                                if (!$self.find(".bblog-slots.truecount").length) {
-                                    let content = '<div class="bblog-slots truecount">' + server.slots[5].current + "/" + server.slots[5].max + '</div>'
-                                    if ($self.find(".bblog-slots.commander").length) {
-                                        $self.find(".bblog-slots.commander").before(content);
-                                    }
-                                    else if ($self.find(".bblog-slots.spectator").length) {
-                                        $self.find(".bblog-slots.spectator").before(content);
-                                    }
-                                    else {
-                                        $self.find("td.players").append(content);
-                                    }
-                                }
-                                else {
-                                    $self.find(".bblog-slots.truecount").html(content);
-                                }
-    
-                                var difference = Math.abs(server.slots[2].current - server.slots[5].current);
-                                let differenceClass = (difference <= 2 ? 'low' : difference <= 5 ? 'mid' : 'high')
-
-                                $self.find(".bblog-slots.truecount").addClass(differenceClass);
-                                $self.find(".bblog-slots.truecount").css("font-size", "12px");
-                            }
-                        }
-                        catch (error) {
-                            console.error(error);
-                        }
-                    }).fail(function () {
-                        console.log("UNKNOWN_ERROR");
-                    }).always(function () {
+                    e.find("tbody .server-row").each(function () {
+                        let $self = $(this)
+                        if ($(this).find("td.players").hasClass("bblog-serverbrowser-playercounts-ignore")) return true;
                         $self.find("td.players").addClass("bblog-serverbrowser-playercounts-ignore")
-                    });
-                });
 
-                if (BBLog.elementCheck(e, action)) return this.callback();
+                        $(this).addClass("bblog-serverbrowser-playercounts")
+                        var server = $(this).data("server");
+                        if (!server) return true;
 
-                var last = e.find("th.server-info a[data-sort]").last();
-                last.after($('<a href="#" data-sort="truecounts" class="ignored-trigger-el">True Counts</a>').data("sort", "truecounts")).after(', ');
+                        var url = S.globalContext.staticContext.keeperQueryEndpoint + "/snapshot/" + server.guid;
+                        $.get(url, function (receievedQueryInfo) {
+                            try {
+                                if (typeof receievedQueryInfo === "object" && receievedQueryInfo.snapshot) {
+                                    let totalPlayers = 0
+                                    let joining = 0
+                                    if (!receievedQueryInfo.snapshot.teamInfo) return;
 
-                if (typeof serverbrowserwarsaw.sorter._refreshSortingsTPC == "undefined") {
-                    serverbrowserwarsaw.sorter._refreshSortingsTPC = serverbrowserwarsaw.sorter.refreshSortings;
-                    serverbrowserwarsaw.sorter.refreshSortings = function () {
-                        serverbrowserwarsaw.sorter._refreshSortingsTPC();
-                        var ASC = false;
-                        var DESC = !ASC;
-                        serverbrowserwarsaw.sorter.sortings.truecounts = {
-                            defaultOrder: DESC,
-                            dataType: "server",
-                            sortFunc: function (server) {
-                                return server.slots[5] ? server.slots[5].current + server.slots[5].max / 1000 : -1;
+                                    Object.keys(receievedQueryInfo.snapshot.teamInfo).forEach(function (key) {
+                                        if (key == 0) {
+                                            joining += Object.keys(receievedQueryInfo.snapshot.teamInfo[key].players).length
+                                        }
+                                        else {
+                                            totalPlayers += Object.keys(receievedQueryInfo.snapshot.teamInfo[key].players).length
+                                        }
+                                    });
+                                    server.slots[5] = {
+                                        current: totalPlayers,
+                                        max: server.slots[2].max
+                                    }
+
+                                    let countHTML = server.slots[5].current + "/" + server.slots[5].max
+                                    if (joining > 0) { countHTML += ` (${joining})` }
+                                    let content = '<div class="bblog-slots truecount">' + countHTML + '</div>'
+                                    if (!$self.find(".bblog-slots.truecount").length) {
+                                        if ($self.find(".bblog-slots.commander").length) {
+                                            $self.find(".bblog-slots.commander").before(content);
+                                        }
+                                        else if ($self.find(".bblog-slots.spectator").length) {
+                                            $self.find(".bblog-slots.spectator").before(content);
+                                        }
+                                        else {
+                                            $self.find("td.players").append(content);
+                                        }
+                                    }
+                                    else {
+                                        $self.find(".bblog-slots.truecount").html(content);
+                                    }
+
+                                    var difference = Math.abs(server.slots[2].current - server.slots[5].current);
+                                    let differenceClass = (difference <= 2 ? 'low' : difference <= 5 ? 'mid' : 'high')
+
+                                    $self.find(".bblog-slots.truecount").addClass(differenceClass);
+                                    $self.find(".bblog-slots.truecount").css("font-size", "12px");
+                                }
                             }
+                            catch (error) {
+                                console.error(error);
+                            }
+                        }).fail(function () {
+                            console.log("UNKNOWN_ERROR");
+                        });
+                    });
+
+                    if (BBLog.elementCheck(e, action)) return this.callback();
+
+                    var last = e.find("th.server-info a[data-sort]").last();
+                    last.after($('<a href="#" data-sort="truecounts" class="ignored-trigger-el">True Counts</a>').data("sort", "truecounts")).after(', ');
+
+                    if (typeof serverbrowserwarsaw.sorter._refreshSortingsTPC == "undefined") {
+                        serverbrowserwarsaw.sorter._refreshSortingsTPC = serverbrowserwarsaw.sorter.refreshSortings;
+                        serverbrowserwarsaw.sorter.refreshSortings = function () {
+                            serverbrowserwarsaw.sorter._refreshSortingsTPC();
+                            var ASC = false;
+                            var DESC = !ASC;
+                            serverbrowserwarsaw.sorter.sortings.truecounts = {
+                                defaultOrder: DESC,
+                                dataType: "server",
+                                sortFunc: function (server) {
+                                    return server.slots[5] ? server.slots[5].current + server.slots[5].max / 1000 : -1;
+                                }
+                            };
                         };
-                    };
+                    }
+                    serverbrowserwarsaw.sorter.toggles.off("click.page.serverbrowser");
+                    serverbrowserwarsaw.trigger("pageshow.sort");
                 }
-                serverbrowserwarsaw.sorter.toggles.off("click.page.serverbrowser");
-                serverbrowserwarsaw.trigger("pageshow.sort");
+                catch (error) {
+                    console.error(error)
+                }
                 break;
             case "bf4.serverbrowser.data":
                 if (BBLog.cache("mode") != "bf4" || !serverbrowserwarsaw || !serverbrowserwarsaw.table) return this.callback();
