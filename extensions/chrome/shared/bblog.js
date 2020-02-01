@@ -19,7 +19,7 @@ var BBLog = {
      *
      * @type String
      */
-    version: '4.9.5',
+    version: '4.9.6',
     build: '',
 
     /**
@@ -1463,7 +1463,7 @@ var BBLog = {
                                 defaultOrder: DESC,
                                 dataType: "server",
                                 sortFunc: function (server) {
-                                    return server.slots[5] ? server.slots[5].current + server.slots[5].max / 1000 : -1;
+                                    return server && server.slots && server.slots[5] ? server.slots[5].current + server.slots[5].max / 1000 : -1;
                                 }
                             };
                         };
