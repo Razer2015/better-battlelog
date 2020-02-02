@@ -7,7 +7,7 @@ var ivb = setInterval(function(){
     clearInterval(ivb);
 
     var extensionApi = ((chrome && chrome.extension && chrome.extension.onConnect ? chrome.extension : null) || browser.runtime);
-    var version = '4.9.6';
+    var version = '5.3.0';
 
     // get settings from background page and than inject
     var port = extensionApi.connect({name: "storage"});
